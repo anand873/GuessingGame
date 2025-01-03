@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+  <h1>Number Guessing Game</h1>
+  <p>Guess a number between 1 and 100. The game will simulate 4 players guessing, and we calculate the scores based on the mean of the guesses. The game ends after 5 rounds and displays the winner.</p>
+
+  <div class="input-container">
+    <input type="number" id="user-guess" min="1" max="100" placeholder="Your Guess" inputmode="numeric" step="1" />
+    <button class="button" onclick="submitGuess()">Submit Guess</button>
+  </div>
+
+  <div class="round-number" id="round-number">Round: 1</div>
+
+  <div id="round-average" class="round-average"></div>
+  <div id="winner" class="winner"></div>
+
+  <!-- Overlay Modal -->
+  <div id="game-over-overlay" class="overlay">
+    <div class="modal">
+      <h2>Game Over</h2>
+      <p id="modal-winner"></p>
+      <button onclick="playAgain()">Play Again</button>
+    </div>
+  </div>
+
+  <!-- Round Guess Table -->
+  <h2>Round Guesses</h2>
+<table class="round-guess-table">
+  <thead>
+    <tr>
+      <th>Round</th>
+      <th>You</th>
+      <th>Captain Clutch</th>
+      <th>Guessmaster General</th>
+      <th>Numinator</th>
+      <th>The Intuitor</th>
+    </tr>
+  </thead>
+  <tbody id="round-guesses">
+    <!-- Round guesses will go here -->
+  </tbody>
+    <tfoot>
+      <tr id="current-scores">
+        <th>Current Scores</th>
+        <td id="user-score">0</td>
+        <td id="player-2-score">0</td>
+        <td id="player-3-score">0</td>
+        <td id="player-4-score">0</td>
+        <td id="player-5-score">0</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <script src="script.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+</html>

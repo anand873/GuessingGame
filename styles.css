@@ -1,0 +1,136 @@
+body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    .input-container {
+      margin-top: 20px;
+    }
+    .input-container input {
+      padding: 10px;
+      font-size: 16px;
+      width: 100px;
+      margin-right: 10px;
+    }
+    .round-number {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    .winner {
+      font-size: 24px;
+      color: #ff0000;
+      margin-top: 30px;
+    }
+    /* Overlay Styles */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeIn 0.5s ease-in;
+    }
+    .modal {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 400px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .modal h2 {
+      font-size: 28px;
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+    .modal p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .modal button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .modal button:hover {
+      background-color: #45a049;
+    }
+    /* Fade-in effect */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .round-guess-table {
+      margin-top: 40px;
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    .round-guess-table th, .round-guess-table td {
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+    .round-guess-table th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .round-guess-table td {
+      text-align: center;
+    }
+
+    /* Animation for newly added row */
+    @keyframes tableFadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .fade-in-row {
+      animation: tableFadeIn 0.5s ease-in;
+    }
+    /* Hide spinner buttons in number input */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
